@@ -1,4 +1,4 @@
-
+{/*In server.js, I went to express js, to the hello world example */}
 const express = require('express')
 const app = express();
 const port = 3000
@@ -16,10 +16,12 @@ app.get('/name', (req,res) =>{
     res.send('Hello' + req.query.fname + " " + req.query.lname);
 })
 
+{/* The app.post() function routes the HTTP POST requests to the specified path with the specified callback functions. */}
 app.post('/name',(req,res)=>{
     res.send('Hello '+req.body.fmame+' '+req.body.lname);
 })
 
+{/* The app.get() function routes the HTTP GET Requests to the path which is being specified with the specified callback functions. */}
 app.get('/', (req, res) => {
   res.send('Welcome to Data Representation & Querying')
 })
@@ -31,6 +33,7 @@ app.get('/hello/:name', (req, res) => {
   })
 
 
+{/* The app.listen() function is used to bind and listen to the connections on the specified host and port.  */}
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
